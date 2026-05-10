@@ -11,7 +11,7 @@ external_menu() {
 
 launcher() {
     [ "$use_external_menu" = "0" ] && [ -z "$1" ] && set -- "+m" "$2"
-    [ "$use_external_menu" = "0" ] && fzf "$1" --reverse --cycle --prompt "$2"
+    [ "$use_external_menu" = "0" ] && fzy --prompt "$2"
     [ "$use_external_menu" = "1" ] && external_menu "$1" "$2" "$external_menu_args"
     [ "$use_external_menu" = "2" ] && external_menu "$1" "$2"
 }
@@ -413,7 +413,7 @@ play_episode() {
             fi
             ;;
         flatpak_mpv) flatpak run io.mpv.Mpv --force-media-title="${allanime_title}Episode ${ep_no}" "$episode" $subs_flag $refr_flag >/dev/null 2>&1 & ;;
-        vlc*) nohup $player_function --http-referrer="${allanime_refr}" --play-and-exit --meta-title="${allanime_title}Episode ${ep_no}" "$episode" >/dev/null 2>&1 & ;;
+        vlc*) nohup $player_function --http-referrer="${allanime_refr}" --meta-title="${allanime_title}Episode ${ep_no}" "$episode" >/dev/null 2>&1 & ;;
         *yncpla*) nohup $player_function "$episode" -- --force-media-title="${allanime_title}Episode ${ep_no}" $subs_flag $refr_flag >/dev/null 2>&1 & ;;
         download) "$player_function" "$episode" "${allanime_title}Episode ${ep_no}" "$subtitle" ;;
         catt) nohup catt cast "$episode" -s "$subtitle" >/dev/null 2>&1 & ;;
