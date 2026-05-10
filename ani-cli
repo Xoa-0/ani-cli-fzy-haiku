@@ -571,7 +571,7 @@ case "$(uname -o 2>/dev/null)" in
     *) dep_ch "openssl" || true ;;
 esac
 [ "$skip_intro" = 1 ] && (dep_ch "ani-skip" || true)
-dep_ch "fzf" || true
+dep_ch "fzy" || true
 case "$player_function" in
     debug) ;;
     download) dep_ch "ffmpeg" "aria2c" ;;
