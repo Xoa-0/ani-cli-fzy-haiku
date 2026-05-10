@@ -5,7 +5,7 @@ This fork doesn’t introduce major changes; just two lines of code have been mo
 ---
 # Basic setup:
 ```sh
-git clone "https://github.com/Xoa-0/ani-cli-fzy-haiku.git"`
+git clone "https://github.com/Xoa-0/ani-cli-fzy-haiku.git"
 cd ~/ani-cli-fzy-haiku
 ```
 
