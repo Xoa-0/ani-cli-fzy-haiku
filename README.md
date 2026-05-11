@@ -1,3 +1,7 @@
+<p align="center">
+  <img width="510" height="400" alt="ani-cli-haiku_demo" src="https://github.com/user-attachments/assets/f2f1c9d9-de25-454d-99c0-85c2df38fbc4" />
+</p>
+
 As of now, there is no fzf port for Haiku, which means that some software, including ani-cli, cannot run. Well, ani-cli-fzy-haiku (or ani-cli-haiku) fixes that!... almost.
 
 This fork doesn’t introduce major changes; just two lines of code have been modified so that the ani-cli script uses fzy (which is available on HaikuDepot) instead of fzf.
